@@ -751,7 +751,7 @@ a.brand:focus{
 }
 
 .menu-list > li{
-  font-size: 1.95rem;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -888,8 +888,10 @@ a.brand:focus{
   left: 1.7rem;
 }
 
-.right-boxed{
+.menu-list.right-boxed{
   right:1.7rem;
+  height: 100%;
+
 }
 
 .section{
@@ -4441,12 +4443,12 @@ a.brand:focus{
 }
 
 .menu-list > li{
-  font-size: 1.65rem;
+  font-size: 18px;
   line-height: 1;
 }
 
 .menu-list > li{
-  margin-top: 2.7rem;
+  margin-top: 1.7rem;
 }
 
 .menu-list > li:first-child{
@@ -7096,6 +7098,7 @@ a.brand:focus{
 
 
 
+
   /* Section About */
 
 
@@ -7234,7 +7237,7 @@ a.brand:focus{
   .col-contact-info{
     margin-top: 5rem;
   }
-
+ 
 
 
   /* Pages */
@@ -7422,7 +7425,7 @@ a.brand:focus{
   }
 
   .menu-list > li{
-    font-size: 2rem;
+    font-size: 18px;
   }
 
   .menu-footer{
@@ -7456,8 +7459,32 @@ a.brand:focus{
     display: block;
   }
   
+  
+}
+.footer h6{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+.footer{
+ background-color: #000;
+}
+.sm-social{
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .sm-social {
+    display: block;
+  }
 }
 
+.project_items div:nth-child(n+4) 
+{
+    display: none;
+}
 
 
 

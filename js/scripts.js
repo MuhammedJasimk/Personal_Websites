@@ -2,7 +2,7 @@
     
 	// Validation
 	
-	var nameError = document.getElementById('name_error');
+	  var nameError = document.getElementById('name_error');
     var mailError = document.getElementById('mail_error');
     var phoneError = document.getElementById('phone_error');
     var subjectError = document.getElementById('subject_error');
@@ -18,7 +18,7 @@
         nameError.innerHTML="Write full name";
         return false;
       }
-      nameError.innerHTML='valid';
+      nameError.innerHTML='';
       return true;
     }
 
@@ -32,7 +32,7 @@
         mailError.innerHTML="Not Valid";
         return false;
       }
-      mailError.innerHTML='valid';
+      mailError.innerHTML='';
       return true;
     }
 
@@ -43,14 +43,14 @@
         return false;
       }
       if (phone.length !== 10){
-        phoneError.innerHTML="Phone No ahould be 10 digit";
+        phoneError.innerHTML="Phone No should be 10 digit";
         return false;
       }
       if (!phone.match(/^[0-9]{10}$/)){
         phoneError.innerHTML="Only digits";
         return false;
       }
-      phoneError.innerHTML='valid';
+      phoneError.innerHTML='';
       return true;
 
     }
@@ -62,7 +62,7 @@
         subjectError.innerHTML=left + "More charecters required";
         return false;
       }
-      subjectError.innerHTML='valid';
+      subjectError.innerHTML='';
       return true;
     }
     function validateMessage(){
@@ -73,11 +73,11 @@
         message_error.innerHTML = left + "More charecters required";
         return false;
       }
-      message_error.innerHTML='valid';
+      message_error.innerHTML='';
       return true;
     }
     function validateSubmit(){
-      if(!validateName() || !validateEmail() || !validatePhone() || !validateSubject() || !validateMessage()){
+      if(!validateName() & !validateEmail() & !validatePhone() & !validateSubject() & !validateMessage()){
         submitError.style.display = 'block'
         submitError.innerHTML='Fill all data'
         setTimeout(function(){submitError.style.display = 'none'},3000)
@@ -85,6 +85,20 @@
       }
     }
 
+    let project_button = document.getElementById('project-button');
+    let parrent = document.getElementById('project-main-box');
+    let child = parrent.children.length;
+    if(child>3){
+      project_button.innerHTML='view all projects '
+    }else{
+      project_button.innerHTML=''
+    }
+  
+    $(".showhide").click(function()
+{
+     $(".project_items div:nth-child(n+4)").toggle();
+});
+  
 // ---------------------------------------//
 
 

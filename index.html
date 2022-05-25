@@ -56,16 +56,16 @@
       </li>
     </ul>
     <div class="menu-footer right-boxed">
-      <div class="social-list">
+      <div class="social-list sm-social">
         <a href="https://github.com/MuhammedJasimk" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/muhammed-jasim-2750a1210/" target="_blank"><i
             class="fab fa-linkedin"></i></a>
-        <a href=""><i class="fab fa-facebook"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href="tel:9744438174"><i class="fas fa-mobile-alt"></i></a>
-        <a href="mailto:jasimmohd22@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100005926681759" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jasim__.k/"><i class="fab fa-instagram" target="_blank"></i></a>
+        <a href="tel:9744438174"><i class="fas fa-mobile-alt" target="_blank"></i></a>
+        <a href="mailto:jasimmohd22@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
-      <div class="copy">© Jasim 2022. All Rights Reseverd</div>
+      <div class="copy">© 2022. All Rights Reseverd</div>
     </div>
   </div>
 
@@ -84,10 +84,10 @@
       <a href="https://github.com/MuhammedJasimk" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/muhammed-jasim-2750a1210/" target="_blank"><i
           class="fab fa-linkedin"></i></a>
-      <a href=""><i class="fab fa-facebook"></i></a>
-      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100005926681759" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/jasim__.k/" target="_blank"><i class="fab fa-instagram" ></i></a>
       <a href="tel:9744438174"><i class="fas fa-mobile-alt"></i></a>
-      <a href="mailto:jasimmohd22@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:jasimmohd22@gmail.com" target="_blank"><i class="fas fa-envelope" ></i></a>
     </div>
   </header>
   <div class="copy-bottom white boxed">© jasim 2022.</div>
@@ -166,7 +166,6 @@
                       <h2 class="title-uppercase">My<span class="text-primary"> Skills </span>
                     </div>
                     <div class="row">
-
                       <div class="col-md-12 col-lg-12">
                         <div class="progress-bars">
                           <div class="row">
@@ -263,7 +262,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <h2 class="title-uppercase text-white">Selected works</h2>
-                        <div class="row-project-box row">
+                        <div class="row-project-box row project_items" id="project-main-box">
                           <div class="col-project-box col-sm-12 col-md-4 col-lg-4">
                             <a href="https://muhammedjasimk.github.io/apple/" target="_blank" class="project-box apple">
                               <div class="project-box-inner">
@@ -287,7 +286,8 @@
                             </a>
                           </div>
                         </div>
-                        <a href="#" class="h5 link-arrow text-white">view all projects <i
+                        <a href="#" class="h5 link-arrow text-white showhide" id="project-button">
+                         <i
                             class="icon icon-chevron-right"></i></a>
                       </div>
                     </div>
@@ -376,27 +376,27 @@
                           <form id="submit-form" action="">
                             <div class="row">
                               <div class="form-group col-sm-6" style="margin-bottom: 0;">
-                                <input type="text" name="name" placeholder="Name*" aria-required="true"
+                                <input type="text" required name="name" placeholder="Name*" aria-required="true"
                                   id="contact_name" onkeyup="validateName()">
                                 <span id="name_error"></span>
                               </div>
                               <div class="form-group col-sm-6">
-                                <input type="email" name="email" placeholder="Email"
+                                <input type="email" required name="email" placeholder="Email*"
                                 id="contact_email" onkeyup="validateEmail()">
                                 <span id="mail_error"></span>
                               </div>
                               <div class="form-group col-sm-6">
-                                <input type="text" name="phone no" placeholder="Phone No"
+                                <input type="text" required name="phone no" placeholder="Phone No*"
                                 id="contact_phone" onkeyup="validatePhone()">
                                 <span id="phone_error"></span>
                               </div>
                               <div class="form-group col-sm-6">
-                                <input type="text" name="subject" placeholder="Subject"
+                                <input type="text" required name="subject" placeholder="Subject*"
                                 id="contact_subject" onkeyup="validateSubject()">
                                 <span id="subject_error"></span>
                               </div>
                               <div class="form-group col-sm-12">
-                                <textarea name="message" placeholder="Message*" aria-required="true"
+                                <textarea name="message" required placeholder="Message*" aria-required="true"
                                 id="contact_message" onkeyup="validateMessage()"></textarea>
                                 <span id="message_error"></span>
                               </div>
@@ -414,6 +414,9 @@
               </div>
             </div>
           </div>
+          <div class="col-sm-12 footer">
+            <h6 class="container">© 2022. All Rights Reseverd</h6>
+          </div>
         </div>
       </div>
     </div>
@@ -427,7 +430,7 @@
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
-                // alert("Form submitted successfully")
+                alert("Form submitted successfully")
                 window.location.reload()
                 //window.location.href="https://google.com"
             },
