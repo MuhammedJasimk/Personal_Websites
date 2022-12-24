@@ -1643,12 +1643,35 @@ a.brand:focus{
 .section-3 .vertical-title{
   top:7.4rem;
 }
+a.project-box::before{
+  background: #0000007d;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 .row-project-box{
   margin-top: -30px;
 }
 .project-box.apple{
   background-image: url(../images/bg/Apple.jpg);
+  background-size: cover;
+}
+.project-box.netflix{
+  background-image: url(../images/bg/netflix.png);
+  background-size: cover;
+}
+.project-box.incub{
+  background-image: url(../images/bg/incub.png);
+  background-size: cover;
+}
+.project-box.newkick{
+  background-image: url(../images/bg/newkick.png);
+  background-size: cover;
+}
+.project-box.social{
+  background-image: url(../images/bg/social_media.png);
   background-size: cover;
 }
 .project-box.mi{

@@ -10,6 +10,7 @@
 
     function validateName(){
       var name = document.getElementById('contact_name').value;
+      console.log(name);
       if (name.length == 0){
         nameError.innerHTML="Name is required";
         return false;
